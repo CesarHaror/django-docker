@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar</title>
+    <link rel="icon" type="image/x-icon" href="https://icons.iconarchive.com/icons/iconsmind/outline/512/Smart-icon.png">
+    <!-- BOOSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">Cesar Haro</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link active">home</a>
+                <a href="/about" class="nav-item nav-link">about</a>
+                <a href="/hello" class="nav-item nav-link">hello</a>
+                <a href="/projects" class="nav-item nav-link">projects</a>
+                <a href="/tasks" class="nav-item nav-link">task</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <a href="/admin" class="nav-item nav-link">login</a>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+      <div class="container p-4">
+        {% block content %}
+      
+        {% endblock %}
+    </div>
+  
+    </div>
+</body>
+</html>

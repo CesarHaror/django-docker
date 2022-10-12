@@ -1,0 +1,26 @@
+{% extends "layouts/layout.html" %}
+
+
+{% block content %}
+  <!-- Jumbotron -->
+    <div class="container-fluid bg-light p-5">
+    <a class="btn btn-primary btn-lg" href="/create_task" role="button">crear nueva tarea</a>   
+    <hr class="my-4">
+      {% for task in tasks %}
+      <div class="container-fluid">
+        <h3>{% if task.done == False %} ⏰ {% else %} ✅ {% endif %} {{task.title}}</h3>
+          <p>{{task.description}}</p>
+          <h5>Project: {{task.project.name}}</h5>
+          <button type="button" class="btn btn-primary">
+            Delete
+        </button>
+        <button type="button" class="btn btn-primary">
+          ✅ Done
+        </button>
+        </div>
+        <hr class="my-4">
+      {% endfor %}
+    </div>
+    {% endblock %}
+
+<!-- Jumbotron -->
